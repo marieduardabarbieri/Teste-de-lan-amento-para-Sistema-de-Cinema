@@ -1,9 +1,9 @@
-const seats = [
-  { id: "A1", sold: false },
-  { id: "A2", sold: false },
-  { id: "A3", sold: false },
-  { id: "A4", sold: false },
-  { id: "A5", sold: false },
+const assentos = [
+  { id: "A1", ocupado: false },
+  { id: "A2", ocupado: false },
+  { id: "A3", ocupado: false },
+  { id: "A4", ocupado: false },
+  { id: "A5", ocupado: false },
 ];
 
-module.exports = seats;
+module.exports = assentos;
