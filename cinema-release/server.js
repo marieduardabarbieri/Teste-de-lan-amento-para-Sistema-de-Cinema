@@ -2,7 +2,7 @@ const express = require("express");
 
 const app = express();
 
-const assentos = require("./dados/assentos");
+const assentos = require("./data/assentos");
 
 app.use(express.json());
 
@@ -17,7 +17,7 @@ app.get("/assentos", (req, res) => {
 app.post("/comprar", (req, res) => {
   const { numeroAssento } = req.body;
 
-  const assento = assentos.find((item) => item.numero === numeroAssento);
+  const assento = assentos.find((item) => item.id === numeroAssento);
 
   if (!assento) {
     return res.status(404).json({
@@ -42,7 +42,7 @@ app.post("/comprar", (req, res) => {
 app.post("/cancelar", (req, res) => {
   const { numeroAssento } = req.body;
 
-  const assento = assentos.find((item) => item.numero === numeroAssento);
+  const assento = assentos.find((item) => item.id === numeroAssento);
 
   if (!assento) {
     return res.status(404).json({
