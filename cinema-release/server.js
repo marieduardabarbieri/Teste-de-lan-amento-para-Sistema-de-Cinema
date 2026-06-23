@@ -2,35 +2,57 @@ const express = require("express");
 
 const app = express();
 
-const seats = require("./data/seats");
+const assentos = require("./dados/assentos");
 
 app.use(express.json());
+
 app.use(express.static("public"));
 
-//Rota para listar assentos
-app.get("/seats", (req, res) => {
-  res.json(seats);
+//Rota para listar
+app.get("/assentos", (req, res) => {
+  res.json(assentos);
 });
 
-//Rota para cadastrar/comprar assento
-app.post("/buy", (req, res) => {
-  const { seatId } = req.body;
+//Rota para comprar ingresso
+app.post("/comprar", (req, res) => {
+  const { numeroAssento } = req.body;
 
-  const seat = seats.find((s) => s.id === seatId);
+  const assento = assentos.find((item) => item.numero === numeroAssento);
 
-  if (!seat) {
+  if (!assento) {
     return res.status(404).json({
-      error: "Assento não encontrado",
+      erro: "Assento não encontrado",
     });
   }
 
-  if (seat.sold) {
+  if (assento.ocupado) {
     return res.status(400).json({
-      error: "Assento indisponível",
+      erro: "Assento indisponível",
     });
   }
 
-  seat.sold = true;
+  assento.ocupado = true;
 
-  res.status(201).json(seat);
+  res.status(201).json({
+    mensagem: "Compra realizada com sucesso",
+  });
+});
+
+//Cancelar a compra
+app.post("/cancelar", (req, res) => {
+  const { numeroAssento } = req.body;
+
+  const assento = assentos.find((item) => item.numero === numeroAssento);
+
+  if (!assento) {
+    return res.status(404).json({
+      erro: "Assento não encontrado",
+    });
+  }
+
+  assento.ocupado = false;
+
+  res.json({
+    mensagem: "Compra cancelada",
+  });
 });
