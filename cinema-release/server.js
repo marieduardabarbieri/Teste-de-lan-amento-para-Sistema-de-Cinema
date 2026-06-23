@@ -56,3 +56,7 @@ app.post("/cancelar", (req, res) => {
     mensagem: "Compra cancelada",
   });
 });
+
+app.listen(3000, () => {
+  console.log("Servidor rodando na porta 3000");
+});
