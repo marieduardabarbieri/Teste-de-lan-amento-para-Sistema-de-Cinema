@@ -1,54 +1,110 @@
-body {
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-image: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  background: #0f0f0f;
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .container {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 30px;
-  border-radius: 12px;
-  color: white;
   width: 500px;
+  background: #1b1b1b;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow:
+    0 0 30px rgba(0, 0, 0, 0.5),
+    0 0 60px rgba(255, 215, 0, 0.08);
   text-align: center;
 }
 
-h1 {
-  color: gold;
+/* Tela do cinema */
+.cinema-screen {
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(to bottom, #ffffff, #d8d8d8);
+  border-radius: 50px;
+  margin-bottom: 35px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
 }
 
-select,
+h1 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  color: #bdbdbd;
+  margin-bottom: 25px;
+}
+
+select {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  background: #2b2b2b;
+  color: white;
+  margin-bottom: 15px;
+}
+
 button {
   width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  border-radius: 6px;
+  padding: 14px;
   border: none;
-}
-
-button {
-  cursor: pointer;
+  border-radius: 10px;
+  font-size: 15px;
   font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 #comprar {
-  background: green;
+  background: #1db954;
   color: white;
+  margin-bottom: 10px;
+}
+
+#comprar:hover {
+  transform: translateY(-2px);
 }
 
 #cancelar {
-  background: crimson;
+  background: #dc3545;
   color: white;
+}
+
+#cancelar:hover {
+  transform: translateY(-2px);
 }
 
 #mensagem {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 17px;
+  font-weight: bold;
+  min-height: 25px;
+}
+
+/* Área visual dos assentos */
+.assentos-demo {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.assento {
+  background: #28a745;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
 }
