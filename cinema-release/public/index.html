@@ -1,30 +1,43 @@
 <!doctype html>
-
-<html>
+<html lang="pt-br">
   <head>
-    <title>Cinema</title>
+    <meta charset="UTF-8" />
+    <title>Cinema Release Testing</title>
+
+    <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <h1>Sistema de Cinema</h1>
+    <div class="container">
+      <h1>Sistema de Cinema</h1>
 
-    <label>Escolha um assento:</label>
+      <p>Escolha seu assento</p>
 
-    <select id="assento">
-      <option>A1</option>
-      <option>A2</option>
-      <option>A3</option>
-      <option>A4</option>
-      <option>A5</option>
-    </select>
+      <select id="assento">
+        <option>A1</option>
+        <option>A2</option>
+        <option>A3</option>
+        <option>A4</option>
+        <option>A5</option>
 
-    <br /><br />
+        <option>B1</option>
+        <option>B2</option>
+        <option>B3</option>
+        <option>B4</option>
+        <option>B5</option>
 
-    <button id="comprar">Comprar ingresso</button>
+        <option>C1</option>
+        <option>C2</option>
+        <option>C3</option>
+        <option>C4</option>
+        <option>C5</option>
+      </select>
 
-    <button id="cancelar">Cancelar compra</button>
+      <button id="comprar">Comprar Ingresso</button>
 
-    <p id="mensagem"></p>
+      <button id="cancelar">Cancelar Compra</button>
+
+      <p id="mensagem"></p>
+    </div>
 
     <script src="script.js"></script>
   </body>
