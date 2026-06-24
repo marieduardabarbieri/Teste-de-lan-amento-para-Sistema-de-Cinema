@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 12px;
+  color: white;
+  width: 500px;
+  text-align: center;
+}
+
+h1 {
+  color: gold;
+}
+
+select,
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#comprar {
+  background: green;
+  color: white;
+}
+
+#cancelar {
+  background: crimson;
+  color: white;
+}
+
+#mensagem {
+  margin-top: 20px;
+  font-size: 18px;
+}
