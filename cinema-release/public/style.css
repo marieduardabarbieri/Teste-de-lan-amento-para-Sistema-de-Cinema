@@ -108,3 +108,22 @@ button {
   font-size: 14px;
   font-weight: bold;
 }
+
+/*Modificar de cor dos assentos conforme seleciona, compra ou cancelar*/
+.assento {
+  background: #28a745;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.assento.selecionado {
+  background: #0d6efd;
+}
+
+.assento.ocupado {
+  background: #dc3545;
+}
